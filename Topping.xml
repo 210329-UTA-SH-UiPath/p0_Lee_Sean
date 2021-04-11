@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfACustomizable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<ATopping xsi:type="VeggieTopping">
+    <Name>DummyVeggie</Name>
+    <Price>1.99</Price>
+  </ATopping>
+  <ATopping xsi:type="CheeseTopping">
+    <Price>2</Price>
+    <Name>DummyCheese</Name>
+  </ATopping>
+  <ATopping xsi:type="MeatTopping">
+    <Price>4</Price>
+    <Name>DummyMeat</Name>
+  </ATopping>
+  <ATopping xsi:type="MeatTopping">
+    <Price>2</Price>
+    <Name>DummyMeat2</Name>
+  </ATopping>
+</ArrayOfACustomizable>

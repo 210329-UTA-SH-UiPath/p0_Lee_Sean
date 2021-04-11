@@ -5,7 +5,7 @@ namespace PizzaBox.Domain.Models
   /// <summary>
   /// 
   /// </summary>
-  public class Crust : AComponent
+  public class Crust : ACustomizable
   {
 
   }

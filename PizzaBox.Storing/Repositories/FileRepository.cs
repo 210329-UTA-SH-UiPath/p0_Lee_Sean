@@ -8,15 +8,16 @@ namespace PizzaBox.Storing.Repositories
 {
   public class FileRepository
   {
-    public bool WriteToFile(List<AStore> stores)
+    public bool WriteToFile<T>(List<T> list, string path)
     {
       try
       {
-        var path = @"store.xml";
-        var writer = new StreamWriter(path);
-        var xml = new XmlSerializer(typeof(List<AStore>));
+        StreamWriter writer = new StreamWriter(path);
+        var xml = new XmlSerializer(typeof(List<T>));
 
-        xml.Serialize(writer, stores);
+        xml.Serialize(writer, list);
+
+        System.Console.WriteLine("Write Success");
 
         return true;
       }
@@ -29,6 +30,27 @@ namespace PizzaBox.Storing.Repositories
         return false;
       }
     }
+    // public bool WriteToFile(List<AStore> stores)
+    // {
+    //   try
+    //   {
+    //     var path = @"store.xml";
+    //     var writer = new StreamWriter(path);
+    //     var xml = new XmlSerializer(typeof(List<AStore>));
+
+    //     xml.Serialize(writer, stores);
+
+    //     return true;
+    //   }
+    //   // catch (FileNotFoundException e)
+    //   // {
+    //   //   throw new Exception("you have wrong file", e);
+    //   // }
+    //   catch
+    //   {
+    //     return false;
+    //   }
+    // }
 
     public List<T> ReadFromFile<T>(string path) where T : class
     {
