@@ -104,7 +104,7 @@ namespace PizzaBox.Client
     {
       string name = "";
 
-      while (name.Length < 4)
+      while (name.Length < 2)
       {
         Console.WriteLine("Please enter your name");
         name = Console.ReadLine();

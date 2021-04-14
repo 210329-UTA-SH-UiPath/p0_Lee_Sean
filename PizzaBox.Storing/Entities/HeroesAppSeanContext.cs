@@ -58,6 +58,13 @@ namespace PizzaBox.Storing.Entities
                 entity.Property(e => e.OrderPlaced).HasColumnType("datetime");
 
                 entity.Property(e => e.OrderTotal).HasColumnType("money");
+
+                entity.Property(e => e.StoreId).HasColumnName("StoreID");
+
+                entity.HasOne(d => d.Store)
+                    .WithMany(p => p.Orders)
+                    .HasForeignKey(d => d.StoreId)
+                    .HasConstraintName("FK__Orders__StoreID__6FE99F9F");
             });
 
             modelBuilder.Entity<Store>(entity =>

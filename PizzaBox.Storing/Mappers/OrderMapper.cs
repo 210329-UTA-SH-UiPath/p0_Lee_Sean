@@ -14,7 +14,7 @@ namespace PizzaBox.Storing.Mappers
         OrderTotal = order.OrderTotal,
         TimeOfOrder = order.OrderPlaced,
         CustomerID = order.CustomerId,
-        StoreID = order.StoreId
+        StoreID = (int)order.StoreId
       };
     }
 
