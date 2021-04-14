@@ -19,6 +19,8 @@ namespace PizzaBox.Storing.Repositories
 
         System.Console.WriteLine("Write Success");
 
+        writer.Close();
+
         return true;
       }
       // catch (FileNotFoundException e)

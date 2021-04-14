@@ -7,18 +7,18 @@ namespace PizzaBox.Client.Singletons
   /// <summary>
   /// 
   /// </summary>
-  public class PizzaSingleton
+  public class SizeSingleton
   {
-    private static PizzaSingleton _instance;
+    private static SizeSingleton _instance;
 
-    public List<APizza> Pizzas { get; set; }
-    public static PizzaSingleton Instance
+    public List<Size> Sizes { get; set; }
+    public static SizeSingleton Instance
     {
       get
       {
         if (_instance == null)
         {
-          _instance = new PizzaSingleton();
+          _instance = new SizeSingleton();
         }
 
         return _instance;
@@ -28,13 +28,13 @@ namespace PizzaBox.Client.Singletons
     /// <summary>
     /// 
     /// </summary>
-    private PizzaSingleton()
+    private SizeSingleton()
     {
-      Pizzas = new List<APizza>()
+      Sizes = new List<Size>()
       {
-        new PlainPizza(),
-        new VeggiePizza(),
-        new MeatPizza()
+        new SmallSize(),
+        new MediumSize(),
+        new LargeSize()
       };
     }
   }

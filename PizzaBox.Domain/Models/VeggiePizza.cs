@@ -6,17 +6,17 @@ namespace PizzaBox.Domain.Models
   /// <summary>
   /// 
   /// </summary>
-  public class MeatPizza : APizza
+  public class VeggiePizza : APizza
   {
-    public MeatPizza()
+    public VeggiePizza()
     {
-      Name = "Speciality Meat Pizza";
-      Price = 11.00M;
+      Name = "Specialty Veggie Pizza";
+      Price = 9.00M;
     }
     public override void AddToppings()
     {
-      Toppings.Add(new MeatTopping());
-      Toppings.Add(new MeatTopping());
+      Toppings.Add(new VeggieTopping());
+      Toppings.Add(new VeggieTopping());
     }
   }
 }

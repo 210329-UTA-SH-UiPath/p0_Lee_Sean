@@ -10,6 +10,7 @@ namespace PizzaBox.Domain.Abstracts
   [XmlInclude(typeof(NewYorkStore))]
   public class AStore
   {
+    public int Id { get; set; }
     public string Name { get; set; }
 
     /// <summary>

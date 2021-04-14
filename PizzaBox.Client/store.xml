@@ -2,18 +2,14 @@
 <ArrayOfAStore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <AStore xsi:type="NewYorkStore">
     <Name>NewYorkStore</Name>
-    <Id>1</Id>
   </AStore>
   <AStore xsi:type="NewYorkStore">
     <Name>NewJerseyStore</Name>
-    <Id>2</Id>
   </AStore>
   <AStore xsi:type="ChicagoStore">
     <Name>ChicagoStore</Name>
-    <Id>3</Id>
   </AStore>
   <AStore xsi:type="ChicagoStore">
     <Name>MichiganStore</Name>
-    <Id>4</Id>
   </AStore>
 </ArrayOfAStore>

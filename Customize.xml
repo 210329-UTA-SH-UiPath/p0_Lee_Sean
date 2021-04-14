@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfACustomizable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ACustomizable xsi:type="Size">
+    <Price>0</Price>
+    <Name>Small</Name>
+  </ACustomizable>
+  <ACustomizable xsi:type="Size">
+    <Price>0</Price>
+    <Name>Medium</Name>
+  </ACustomizable>
+  <ACustomizable xsi:type="Size">
+    <Price>0</Price>
+    <Name>Large</Name>
+  </ACustomizable>
+  <ACustomizable xsi:type="Crust">
+    <Price>0</Price>
+    <Name>Cheese-Stuffed</Name>
+  </ACustomizable>
+  <ACustomizable xsi:type="Crust">
+    <Price>0</Price>
+    <Name>Thin Crust</Name>
+  </ACustomizable>
+  <ACustomizable xsi:type="Crust">
+    <Price>0</Price>
+    <Name>Chicago Deep Dish</Name>
+  </ACustomizable>
+  <ACustomizable xsi:type="Crust">
+    <Price>0</Price>
+    <Name>NY Style</Name>
+  </ACustomizable>
+</ArrayOfACustomizable>

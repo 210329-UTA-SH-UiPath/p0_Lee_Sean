@@ -3,6 +3,7 @@ using PizzaBox.Domain.Abstracts;
 using PizzaBox.Storing.Repositories;
 using PizzaBox.Domain.Models.Toppings;
 using System.IO;
+using PizzaBox.Domain.Models;
 
 namespace PizzaBox.Client.Singletons
 {
@@ -11,7 +12,7 @@ namespace PizzaBox.Client.Singletons
     private static ToppingSingleton _instance;
     private static readonly FileRepository _fileRepository = new FileRepository();
     private const string _path = @"Topping.xml";
-    public List<ACustomizable> Toppings { get; set; }
+    public List<Topping> Toppings { get; set; }
     public static ToppingSingleton Instance
     {
       get
@@ -20,7 +21,6 @@ namespace PizzaBox.Client.Singletons
         {
           _instance = new ToppingSingleton();
         }
-
         return _instance;
       }
     }
@@ -29,7 +29,7 @@ namespace PizzaBox.Client.Singletons
     {
       if (!File.Exists(_path))
       {
-        Toppings = new List<ACustomizable>()
+        Toppings = new List<Topping>()
         {
           new VeggieTopping(),
           new CheeseTopping(),
@@ -47,8 +47,7 @@ namespace PizzaBox.Client.Singletons
     private ToppingSingleton()
     {
       CreateToppings();
-      //Toppings = _fileRepository.ReadFromFile<ATopping>(_path);
-
+      Toppings = _fileRepository.ReadFromFile<Topping>(_path);
     }
   }
 }

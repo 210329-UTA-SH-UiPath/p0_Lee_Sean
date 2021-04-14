@@ -15,7 +15,7 @@ namespace PizzaBox.Testing.Tests
     public void Test_PizzaCrust()
     {
       // arrange
-      var sut = new VeganPizza();
+      var sut = new VeggiePizza();
 
       // act
       var actual = sut.Crust;
